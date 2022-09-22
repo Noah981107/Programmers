@@ -7,7 +7,6 @@ class Solution {
     
     public int solution(String dirs) {
 		int answer = 0;
-		int map[][] = new int[11][11];
 		boolean visit[][][] = new boolean[11][11][4];
 		int r = 5, c = 5;
 		for (int i = 0; i < dirs.length(); i++) {
