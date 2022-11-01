@@ -39,7 +39,7 @@ class Solution {
             pq.offer(new Food(food_times[i], i + 1));
         }
         
-        int summary = 0;
+        long summary = 0;
         long previous = 0;
         long length = food_times.length;
         
