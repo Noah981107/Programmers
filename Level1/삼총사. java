@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+class Solution {
+    
+    private static int count = 0;
+    
+    public int solution(int[] number) {
+        solution(0, 0, new int[3], number);
+        return count;
+    }
+    
+    public void solution(int start, int depth, int[] arr, int[] number) {
+        if (depth == 3) {
+            int sum = 0;
+            for (int i=0; i<arr.length; i++)
+                sum += arr[i];
+            
+            if (sum == 0)
+                count++;
+            
+            return;
+        }
+        
+        for (int i=start; i<number.length; i++) {
+            arr[depth] = number[i];
+            solution(i + 1, depth + 1, arr, number);
+        }
+    }
+}
